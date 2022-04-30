@@ -1,3 +1,10 @@
+.nav__wrapper{
+    height: 50px;
+    box-shadow: 0px 7px 5px 0px rgba(38,37,37,0.75);
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(38,37,37,0.75);
+    -moz-box-shadow: 0px 7px 5px 0px rgba(38,37,37,0.75);
+}
+
 .nav{
     display: flex;
     flex-direction: row;
@@ -7,9 +14,20 @@
 
 .left{
     flex: 4;
+    padding: 10px 0;
+}
+
+.left:hover{
+    color: aliceblue;
 }
 
 .right{
     display: flex;
-    justify-content: space-between;
+}
+
+.link{
+    padding: 10px 20px;
+}
+.link:hover{
+    color: blue;
 }

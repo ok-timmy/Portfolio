@@ -1,0 +1,35 @@
+.header{
+    text-align: center;
+}
+
+.section{
+    width: 80%;
+    margin: auto;
+}
+
+
+.stack__section{
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: repeat(2, 1fr);
+ grid-column-gap: 30px;
+ grid-row-gap: 15px;
+}
+
+.card{
+    box-shadow: 5px 5px 5px 0px rgba(31, 30, 30, 0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(31, 30, 30, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(31, 30, 30, 0.75);
+}
+
+.stack__list{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.listed__item{
+padding: 5px 10px;
+}

@@ -4,7 +4,7 @@ import styles from "../../styles/header.module.css"
 function Header() {
   return (
     <div>
-      <nav >
+      <nav className={styles.nav__wrapper}>
         <div id="navBackgroundDemo1" className={styles.nav}>
           <div className={styles.left}>
             <Link href={"/"}>
@@ -14,13 +14,13 @@ function Header() {
 
           <div className={styles.right}>
                 <Link href={"/abour"}>
-                  <a className="navbar-item">Resume</a>
+                  <a className={styles.link}>Resume</a>
                 </Link>
                 <Link href={"/about"}>
-                  <a className="navbar-item">About</a>
+                  <a className={styles.link}>About</a>
                 </Link>
                 <Link href={"/contact"}>
-                  <a className="navbar-item">Contact</a>
+                  <a className={styles.link}>Contact</a>
                 </Link>  
           </div>
         </div>
