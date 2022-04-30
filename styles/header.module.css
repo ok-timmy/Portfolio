@@ -1,0 +1,15 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.left{
+    flex: 4;
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+}
