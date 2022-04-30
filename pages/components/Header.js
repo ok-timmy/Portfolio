@@ -1,9 +1,10 @@
 import Link from "next/link";
+import {motion} from 'framer-motion';
 import styles from "../../styles/header.module.css"
 
 function Header() {
   return (
-    <div>
+    <motion.div initial={{y:"-100vh"}} animate={{y:"0"}} transition={{delay:2, duration:2}}>
       <nav className={styles.nav__wrapper}>
         <div id="navBackgroundDemo1" className={styles.nav}>
           <div className={styles.left}>
@@ -25,7 +26,7 @@ function Header() {
           </div>
         </div>
       </nav>
-    </div>
+    </motion.div>
   );
 }
 

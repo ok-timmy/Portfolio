@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
+import { motion } from "framer-motion";
 import styles from "../styles/projects.module.css";
 import ecommerce_app from "../public/timshop.jpg"
 import weather_app from '../public/weather-app.jpg';
@@ -21,7 +22,7 @@ export default function projectsPage() {
       </Head>
 
 
-    <section className={styles.project__page}>
+    <motion.section initial={{y:"-1000vh"}} animate={{y:"0"}} transition={{duration:2, delay:2}} className={styles.project__page}>
       <h3 className={styles.project__header}>My Projects</h3>
 
       <p>Here is a List of Some awesome projects I have built in the past</p>
@@ -144,7 +145,7 @@ export default function projectsPage() {
           <p>Feel Free to Check My GitHub Repo</p>
           <Link href={'https://www.github.com/ok-timmy'} passHref><a> GitHub</a></Link>
       </div>
-    </section>
+    </motion.section>
     </>
   );
 }

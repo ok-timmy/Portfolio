@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&display=swap');
+
 html,
 body {
   padding: 0;
@@ -6,6 +8,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: rgb(36, 35, 35);
   color: white;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 a {

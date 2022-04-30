@@ -1,5 +1,67 @@
-.body{
+.body {
   color: white;
   width: 80%;
   margin: auto;
+  position: relative;
+}
+
+.p {
+  position: absolute;
+  font-family: "Alumni Sans", sans-serif;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  font-size: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.main__div {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Alumni Sans", sans-serif;
+}
+
+.my__name {
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+.my__desc {
+  font-size: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.side__nav {
+  position: absolute;
+  top: 30%;
+  right: 10px;
+  list-style: none;
+}
+
+
+
+.linkedIn  {
+  color: #0a66c2;
+  cursor: pointer;
+}
+
+.twitter {
+  color: #1da1f2;
+}
+
+.github {
+  color: #666666;
+}
+
+.email {
+  color: white;
 }
