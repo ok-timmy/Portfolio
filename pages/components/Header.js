@@ -13,14 +13,14 @@ function Header() {
           </div>
 
           <div className={styles.right}>
-                <Link href={"/abour"}>
+                <Link href={"/about"}>
                   <a className={styles.link}>Resume</a>
                 </Link>
                 <Link href={"/about"}>
                   <a className={styles.link}>About</a>
                 </Link>
-                <Link href={"/contact"}>
-                  <a className={styles.link}>Contact</a>
+                <Link href={"/projects"}>
+                  <a className={styles.link}>Projects</a>
                 </Link>  
           </div>
         </div>

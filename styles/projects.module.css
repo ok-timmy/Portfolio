@@ -1,0 +1,41 @@
+.project__page {
+    width: 80%;
+    margin: auto;
+}
+
+.project__header {
+  text-align: center;
+}
+
+.project__card {
+    padding: 20px 10px;
+    display: flex;
+    box-shadow: 0px 6px 5px 0px rgba(30,30,30,0.75);
+-webkit-box-shadow: 0px 6px 5px 0px rgba(30,30,30,0.75);
+-moz-box-shadow: 0px 6px 5px 0px rgba(30,30,30,0.75);
+}
+
+.project__left {
+ flex: 5;
+}
+
+.project__image{
+    filter: grayscale(0.3) blur(1px);
+}
+
+.project__right {
+ flex: 3;
+ padding-left: 10px;
+}
+
+.stack__list{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.listed__item{
+padding: 2px 5px;
+}
