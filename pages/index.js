@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
+import timmy from "../public/nerd-geek-img.png";
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ export default function Home() {
               initial={{
                 position: "absolute",
                 x: "100px",
-                y: "-700px",
+                y: "-800px",
                 fontSize: "400px",
               }}
               animate={{
@@ -58,43 +58,92 @@ export default function Home() {
               I am a Frontend Developer
             </motion.p>
           </motion.div>
-          <p></p>
         </motion.div>
-
-        <section className="contact-me">
-          <div >
-            <motion.ul initial={{opacity:0}} animate={{opacity:1}} transition={{delay:5, duration:2}} className={styles.side__nav}>
-              <motion.li animate={{cursor:"pointer"}}>
-                <Link href="mailto:oktimmy45@gmail.com" passHref>
-                  <a>
-                    <i className={`fa fa-solid fa-envelope ${styles.email}`}></i>
-                  </a>
-                </Link>
-              </motion.li>
-              <li>
-                <Link href="https://twitter.com/Ok_Timmy">
-                  <a className={styles.twitter} target="_blank" rel="noopener noreferrer">
-                    <i className="fa fa-brands fa-twitter"></i>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="www.linkedin.com/in/okunola-timilehin-37aa101a0">
-                  <a className={styles.linkedIn} target="_blank" rel="noopener noreferrer">
-                    <i className="fa fa-brands fa-linkedin"></i>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="https://github.com/ok-timmy?tab=repositories">
-                  <a className={styles.g} target="_blank" rel="noopener noreferrer">
-                    <i className="fa fa-brands fa-github"></i>
-                  </a>
-                </Link>
-              </li>
-            </motion.ul>
-          </div>
-        </section>
+        <motion.div
+          initial={{ opacity: "0" }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 4, duration: 1.5, stiffness: 100 }}
+          className={styles.image__div}
+        >
+          <Image src={timmy} alt={"Timmy"} />
+        </motion.div>
+      </div>
+      <div>
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 5, duration: 2 }}
+          className={styles.side__nav}
+        >
+          <li>
+            <a
+              className={styles.email}
+              href="mailto:oktimmy45@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.i
+                whileHover={{
+                  scale: 2,
+                  color: "rgb(220, 220, 220)",
+                  transition: { duration: 1 },
+                }}
+                className="fa fa-solid fa-envelope"
+              ></motion.i>
+            </a>
+          </li>
+          <li>
+            <a
+              className={styles.twitter}
+              href="https://www.twitter.com/Ok_Timmy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.i
+                whileHover={{
+                  scale: 2,
+                  color: "#055181",
+                  transition: { duration: 1 },
+                }}
+                className="fa fa-brands fa-twitter"
+              ></motion.i>
+            </a>
+          </li>
+          <li>
+            <a
+              className={styles.linkedIn}
+              href="https://www.linkedin.com/in/okunola-timilehin-37aa101a0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.i
+                whileHover={{
+                  scale: 2,
+                  color: "#4491de",
+                  transition: { duration: 1 },
+                }}
+                className="fa fa-brands fa-linkedin"
+              ></motion.i>
+            </a>
+          </li>
+          <li>
+            <a
+              className={styles.github}
+              href="https://github.com/ok-timmy?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.i
+                whileHover={{
+                  scale: 2,
+                  color: "#c9510c",
+                  transition: { duration: 1 },
+                }}
+                className="fa fa-brands fa-github"
+              ></motion.i>
+            </a>
+          </li>
+        </motion.ul>
       </div>
     </>
   );

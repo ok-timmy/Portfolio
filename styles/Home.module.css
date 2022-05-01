@@ -3,6 +3,9 @@
   width: 80%;
   margin: auto;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .p {
@@ -28,6 +31,10 @@
   font-family: "Alumni Sans", sans-serif;
 }
 
+.image__div{
+  height: 20rem;
+}
+
 .my__name {
   font-size: 100px;
   padding: 0;
@@ -42,26 +49,73 @@
 
 .side__nav {
   position: absolute;
+  z-index: 100;
   top: 30%;
-  right: 10px;
+  left: 0%;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40vh;
 }
 
 
 
 .linkedIn  {
   color: #0a66c2;
-  cursor: pointer;
+  font-size: 1.5rem;
 }
+
 
 .twitter {
   color: #1da1f2;
+  font-size: 1.5rem;
 }
 
 .github {
   color: #666666;
+  font-size: 1.5rem;
 }
 
 .email {
   color: white;
+  font-size: 1.5rem;
+}
+
+
+@media screen and (max-width:480px) {
+
+  .body{
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .p{
+    font-size: 5rem;
+  }
+
+  .main__div{
+    width: 100%;
+    height: 85vh;
+  }
+
+  .my__desc{
+    font-size: 40px;
+  }
+
+  .image__div{
+    position: absolute;
+    top:10%;
+    left: 0;
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .side__nav{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    align-self: center;
+    padding: 0;
+  }
 }

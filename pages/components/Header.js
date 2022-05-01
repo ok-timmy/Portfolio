@@ -14,7 +14,7 @@ function Header() {
           </div>
 
           <div className={styles.right}>
-                <Link href={"/about"}>
+                <Link href={"https://docs.google.com/document/d/1-a0uXiqhcoPKQCKQE63t_GD0J0BQPKQfuCf907I9Ra4/edit"}>
                   <a className={styles.link}>Resume</a>
                 </Link>
                 <Link href={"/about"}>

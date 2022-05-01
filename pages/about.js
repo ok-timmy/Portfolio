@@ -1,26 +1,43 @@
 import Image from "next/image";
+import Head from "next/head";
 import { motion } from "framer-motion";
 import styles from "../styles/About.module.css";
 import timmy from "../public/timmy.jpg";
 
 export default function aboutPage() {
   return (
+<>
+    <Head>
+        <title>About Me</title>
+        <meta name="description" content="Ok_Timmy Portfolio Website" />
+        <link rel="icon" href="/tim-logo.png" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+      </Head>
     <section className={styles.section}>
       <h2 className={styles.header}>About Timmy</h2>
 
       <h3>Description</h3>
       <div className={styles.about__me}>
-        <article className={styles.article}>
+        <motion.article initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1.5, delay:2}} className={styles.article}>
           <p>
-            I am a young, hardworking and responsible lad. I have been coding
-            since my early teenage years. I enjoy writing code. I have
-            experience using both frontend and backend technologies to build
-            beautiful, responsive and fuctional web apps Leaving my clients
-            impressed and delivering quality service are my biggest motivation
-            while writing codes.
+            I am a young, hardworking and responsible web developer. I have been coding
+            since my early teenage years. I enjoy writing code.
           </p>
-        </article>
-          <Image src={timmy} alt="timmy" className={styles.timmy__image}/>
+          <p>
+            I have experience using both frontend and backend technologies to
+            build beautiful, responsive and fuctional web apps
+          </p>
+          <p>
+            Leaving my clients impressed and delivering quality service are my
+            biggest motivation while writing codes.
+          </p>
+        </motion.article>
+        <div className={styles.image__div}>
+          <Image src={timmy} alt="timmy" className={styles.timmy__image} />
+        </div>
       </div>
 
       <h3 className={styles.header}>My Stacks</h3>
@@ -123,5 +140,6 @@ export default function aboutPage() {
         </card>
       </div>
     </section>
+    </>
   );
 }
