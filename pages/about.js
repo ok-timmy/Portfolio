@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import styles from "../styles/About.module.css";
 import timmy from "../public/timmy.jpg";
 

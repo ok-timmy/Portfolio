@@ -22,12 +22,12 @@ export default function projectsPage() {
       </Head>
 
 
-    <motion.section initial={{y:"-1000vh"}} animate={{y:"0"}} transition={{duration:2, delay:2}} className={styles.project__page}>
+    <section className={styles.project__page}>
       <h3 className={styles.project__header}>My Projects</h3>
 
       <p>Here is a List of Some awesome projects I have built in the past</p>
       <div>
-        <card
+        <motion.card initial={{x:"-200vw"}} animate={{x:"0"}} transition={{delay:1.5}}
           className={styles.project__card}
         >
           <div className={styles.project__left}>
@@ -57,9 +57,9 @@ export default function projectsPage() {
               </span>
             </div>
           </div>
-        </card>
+        </motion.card>
 
-        <card
+        <motion.card initial={{x:"200vw"}} animate={{x:"0"}} transition={{delay:1.5}}
             className={styles.project__card}
           >
             <div className={styles.project__left}>
@@ -82,8 +82,8 @@ export default function projectsPage() {
                 ></Link>
               </div>
             </div>
-          </card>
-          <card
+          </motion.card>
+          <motion.card initial={{x:"-200vw"}} animate={{x:"0"}} transition={{delay:1.5}}
             className={styles.project__card}
           >
             <div className={styles.project__left}>
@@ -105,9 +105,9 @@ export default function projectsPage() {
                 ></Link>
               </div>
             </div>
-          </card>
+          </motion.card>
 
-          <card
+          <motion.card initial={{x:"-200vw"}} animate={{x:"0"}} transition={{delay:1.5}}
             className={styles.project__card}
           >
             <div className={styles.project__left}>
@@ -137,7 +137,7 @@ export default function projectsPage() {
                 ></Link>
               </div>
             </div>
-          </card>
+          </motion.card>
       </div>
 
       <div>
@@ -145,7 +145,7 @@ export default function projectsPage() {
           <p>Feel Free to Check My GitHub Repo</p>
           <Link href={'https://www.github.com/ok-timmy'} passHref><a> GitHub</a></Link>
       </div>
-    </motion.section>
+    </section>
     </>
   );
 }

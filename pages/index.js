@@ -64,13 +64,13 @@ export default function Home() {
         <section className="contact-me">
           <div >
             <motion.ul initial={{opacity:0}} animate={{opacity:1}} transition={{delay:5, duration:2}} className={styles.side__nav}>
-              <li>
+              <motion.li animate={{cursor:"pointer"}}>
                 <Link href="mailto:oktimmy45@gmail.com" passHref>
                   <a>
                     <i className={`fa fa-solid fa-envelope ${styles.email}`}></i>
                   </a>
                 </Link>
-              </li>
+              </motion.li>
               <li>
                 <Link href="https://twitter.com/Ok_Timmy">
                   <a className={styles.twitter} target="_blank" rel="noopener noreferrer">
