@@ -1,6 +1,8 @@
 .body {
-  color: white;
+  color: #ffffff;
+  height: 100vh;
   width: 80%;
+  /* overflow-y: hidden; */
   margin: auto;
   position: relative;
   display: flex;
@@ -82,11 +84,24 @@
   font-size: 1.5rem;
 }
 
+.hire__me{
+  border: none;
+  background-color: transparent;
+  margin-top: 20px;
+  color: white;
+}
+
+.hire__link{
+  border: rgb(72, 72, 235) solid 2px;
+  padding: 10px 20px;
+  border-radius: 13px;
+}
+
 
 @media screen and (max-width:480px) {
 
   .body{
-    width: 95%;
+    width: 90%;
     flex-direction: column;
   }
 
@@ -115,6 +130,7 @@
     position: relative;
     flex-direction: row;
     height: auto;
+    /* margin: 0; */
     align-self: center;
     padding: 0;
   }

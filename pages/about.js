@@ -21,7 +21,7 @@ export default function aboutPage() {
 
       <h3>Description</h3>
       <div className={styles.about__me}>
-        <motion.article initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1.5, delay:2}} className={styles.article}>
+        <motion.article initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1.5, delay:1.5}} className={styles.article}>
           <p>
             I am a young, hardworking and responsible web developer. I have been coding
             since my early teenage years. I enjoy writing code.
@@ -40,9 +40,9 @@ export default function aboutPage() {
         </div>
       </div>
 
-      <h3 className={styles.header}>My Stacks</h3>
+      <motion.h3 initial={{opacity:0}} animate={{opacity:1}} transition={{duration:2, delay:2.5}} className={styles.header}>My Stacks</motion.h3>
       <div className={styles.stack__section}>
-        <card className={styles.card}>
+        <motion.card initial={{x:"-1000vw"}} animate={{x:0}} transition={{duration:2, delay:1.5}} className={styles.card}>
           <h2>Front-End</h2>
           <p>
             Here is a list of stack I use best for creating beautiful layout and
@@ -86,8 +86,8 @@ export default function aboutPage() {
               <span>NextJs</span>
             </li>
           </ul>
-        </card>
-        <card className={styles.card}>
+        </motion.card>
+        <motion.card initial={{x:"1000vw"}} animate={{x:0}} transition={{duration:2, delay:2.5}} className={styles.card}>
           <h2>Back-End</h2>
           <p>
             On the backend, I am very much comfortable using the following
@@ -104,8 +104,8 @@ export default function aboutPage() {
               <span>Javascript</span>
             </li>
           </ul>
-        </card>
-        <card className={styles.card}>
+        </motion.card>
+        <motion.card initial={{x:"-1000vw"}} animate={{x:0}} transition={{duration:2, delay:3.5}} className={styles.card}>
           <h2>Database</h2>
           <p>Here is a list of database technologies I use effectively</p>
           <ul className={styles.stack__list}>
@@ -116,8 +116,8 @@ export default function aboutPage() {
               <span>Mongoose</span>
             </li>
           </ul>
-        </card>
-        <card className={styles.card}>
+        </motion.card>
+        <motion.card initial={{x:"1000vw"}} animate={{x:0}} transition={{duration:2, delay:4.5}} className={styles.card}>
           <h2>Wordpress</h2>
           <p>
             Here is a list of technologies I use for creating amazing wordpress
@@ -137,7 +137,7 @@ export default function aboutPage() {
               <span>Divi</span>
             </li>
           </ul>
-        </card>
+        </motion.card>
       </div>
     </section>
     </>

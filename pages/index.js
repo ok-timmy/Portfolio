@@ -22,7 +22,7 @@ export default function Home() {
           opacity: 1,
           zIndex: 10,
         }}
-        animate={{ opacity: 0 }}
+        animate={{ opacity: 0, display: "none" }}
         transition={{ delay: 2, duration: 1 }}
         className={styles.p}
       >
@@ -57,6 +57,22 @@ export default function Home() {
             >
               I am a Frontend Developer
             </motion.p>
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 5, duration: 2 }}
+              className={styles.hire__me}
+            >
+              <motion.a
+                whileHover={{
+                  backgroundColor: "rgb(72, 72, 235)",
+                  cursor: "pointer",
+                }}
+                className={styles.hire__link}
+              >
+                Hire Me
+              </motion.a>
+            </motion.button>
           </motion.div>
         </motion.div>
         <motion.div

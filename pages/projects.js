@@ -54,13 +54,21 @@ export default function projectsPage() {
               </ul>
               <div>
                 <span>
-                  <Link
-                    href={"https://www.timshop.netlify.app"}
-                    passHref
+                  <a
+                    href="https://www.timshop.netlify.app"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <i className="fa fa-light fa-link">Link </i>
-                  </Link>
+                    <motion.i
+                      whileHover={{
+                        scale: 2,
+                        originX: 0,
+                        color: "#c9510c",
+                        transition: { duration: 1 },
+                      }}
+                      className={`fa fa-light fa-link ${styles.link__icon}`}
+                    ></motion.i>
+                  </a>
                 </span>
                 <span>
                   <a
@@ -71,10 +79,11 @@ export default function projectsPage() {
                     <motion.i
                       whileHover={{
                         scale: 2,
+                        originX: 0,
                         color: "#c9510c",
                         transition: { duration: 1 },
                       }}
-                      className="fa fa-brands fa-github"
+                      className={`fa fa-brands fa-github  ${styles.link__icon}`}
                     ></motion.i>
                   </a>
                 </span>
@@ -101,10 +110,24 @@ export default function projectsPage() {
                 An App built with Javascript that allows users create their
                 todos and also mark it as done when they complete their task
               </p>
+              <p>Built with</p>
+              <ul className={styles.stack__list}>
+                <li className={styles.listed__item}> HTML</li>
+                <li className={styles.listed__item}>CSS</li>
+                <li className={styles.listed__item}>JavaScript</li>
+              </ul>
               <div>
                 <Link href="https://timmy-todo.netlify.app/" passHref>
                   <a>
-                    <i className="fa fa-light fa-link"></i>
+                    <motion.i
+                      whileHover={{
+                        scale: 2,
+                        originX: 0,
+                        color: "#c9510c",
+                        transition: { duration: 1 },
+                      }}
+                      className={`fa fa-light fa-link  ${styles.link__icon}`}
+                    ></motion.i>
                   </a>
                 </Link>
                 <a
@@ -115,10 +138,11 @@ export default function projectsPage() {
                   <motion.i
                     whileHover={{
                       scale: 2,
+                      originX: 0,
                       color: "#c9510c",
                       transition: { duration: 1 },
                     }}
-                    className="fa fa-brands fa-github"
+                    className={`fa fa-brands fa-github  ${styles.link__icon}`}
                   ></motion.i>
                 </a>
               </div>
@@ -140,12 +164,27 @@ export default function projectsPage() {
             <div className={styles.project__right}>
               <h3>Weather App</h3>
               <p>
-                A simple Weather App built with React JS and OpenWeatherMap API
+                A simple Weather App where visitors can check the weather
+                conditions of any location in the world
               </p>
+              <p>Built with</p>
+              <ul className={styles.stack__list}>
+                <li className={styles.listed__item}> ReactJS</li>
+                <li className={styles.listed__item}>OpenWeatherMap API</li>
+                <li className={styles.listed__item}>CSS</li>
+              </ul>
               <div>
                 <Link href="https://timmy-weather.netlify.app/" passHref>
                   <a>
-                    <i className="fa fa-light fa-link"></i>
+                    <motion.i
+                      whileHover={{
+                        scale: 2,
+                        originX: 0,
+                        color: "#c9510c",
+                        transition: { duration: 1 },
+                      }}
+                      className={`fa fa-light fa-link ${styles.link__icon}`}
+                    ></motion.i>
                   </a>
                 </Link>
                 <a
@@ -156,10 +195,11 @@ export default function projectsPage() {
                   <motion.i
                     whileHover={{
                       scale: 2,
+                      originX: 0,
                       color: "#c9510c",
                       transition: { duration: 1 },
                     }}
-                    className="fa fa-brands fa-github"
+                    className={`fa fa-brands fa-github  ${styles.link__icon}`}
                   ></motion.i>
                 </a>
               </div>
@@ -196,7 +236,15 @@ export default function projectsPage() {
               <div>
                 <Link href="https://timmy-notes.netlify.app/" passHref>
                   <a>
-                    <i className="fa fa-light fa-link"></i>
+                    <motion.i
+                      whileHover={{
+                        scale: 2,
+                        originX: 0,
+                        color: "#c9510c",
+                        transition: { duration: 1 },
+                      }}
+                      className={`fa fa-light fa-link  ${styles.link__icon}`}
+                    ></motion.i>
                   </a>
                 </Link>
                 <a
@@ -207,20 +255,25 @@ export default function projectsPage() {
                   <motion.i
                     whileHover={{
                       scale: 2,
+                      originX: 0,
                       color: "#c9510c",
                       transition: { duration: 1 },
                     }}
-                    className="fa fa-brands fa-github"
+                    className={`fa fa-brands fa-github  ${styles.link__icon}`}
                   ></motion.i>
                 </a>
               </div>
             </div>
+            s
           </motion.card>
         </div>
 
         <div>
-          <p>Want To Check Out More Projects?</p>
-          <p>Feel Free to Check My GitHub Repo</p>
+          <p>
+            Want To Check Out More Projects? Feel Free to Check{" "}
+            <button>My GitHub Repo</button>
+          </p>
+
           <Link href={"https://www.github.com/ok-timmy"} passHref>
             <a>
               {" "}
