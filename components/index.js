@@ -7,15 +7,6 @@ import timmy from "../public/nerd-geek-img.png";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Home</title>
-        <meta name="description" content="Ok_Timmy Portfolio Website" />
-        <link rel="icon" href="/tim-logo.png" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-      </Head>
 
       <motion.div
         initial={{

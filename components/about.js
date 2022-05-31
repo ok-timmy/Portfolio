@@ -7,15 +7,6 @@ import timmy from "../public/timmy.jpg";
 export default function aboutPage() {
   return (
 <>
-    <Head>
-        <title>About Me</title>
-        <meta name="description" content="Ok_Timmy Portfolio Website" />
-        <link rel="icon" href="/tim-logo.png" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-      </Head>
     <section className={styles.section}>
       <h2 className={styles.header}>About Timmy</h2>
 

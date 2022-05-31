@@ -11,16 +11,6 @@ import Link from "next/link";
 export default function projectsPage() {
   return (
     <>
-      <Head>
-        <title>My Projects</title>
-        <meta name="description" content="Ok_Timmy Portfolio Website" />
-        <link rel="icon" href="/tim-logo.png" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-      </Head>
-
       <section className={styles.project__page}>
         <h3 className={styles.project__header}>My Projects</h3>
 
