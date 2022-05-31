@@ -8,7 +8,7 @@ import todo_app from "../public/todos.jpg";
 import note_app from "../public/note-app.jpg";
 import Link from "next/link";
 
-export default function projectsPage() {
+export default function Projects() {
   return (
     <>
       <section className={styles.project__page}>

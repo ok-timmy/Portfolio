@@ -1,136 +1,191 @@
 import Image from "next/image";
-import Head from "next/head";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import styles from "../styles/About.module.css";
-import timmy from "../public/timmy.jpg";
+// import timmy from "../public/timmy.jpg";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-export default function aboutPage() {
+const boxVariant = {
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 0 }
+};
+
+export default function About() {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
-<>
-    <section className={styles.section}>
-      <h2 className={styles.header}>About Timmy</h2>
+    <>
+      <motion.section
+        ref={ref}
+        variants={boxVariant}
+        initial="hidden"
+        animate={control}
+        className={styles.section}
+      >
+        <h2 className={styles.header}>About Timmy</h2>
 
-      <h3>Description</h3>
-      <div className={styles.about__me}>
-        <motion.article initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1.5, delay:1.5}} className={styles.article}>
-          <p>
-            I am a young, hardworking and responsible web developer. I have been coding
-            since my early teenage years. I enjoy writing code.
-          </p>
-          <p>
-            I have experience using both frontend and backend technologies to
-            build beautiful, responsive and fuctional web apps
-          </p>
-          <p>
-            Leaving my clients impressed and delivering quality service are my
-            biggest motivation while writing codes.
-          </p>
-        </motion.article>
-        <div className={styles.image__div}>
+        <h3>Description</h3>
+        <div className={styles.about__me}>
+          <motion.article
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 1.5 }}
+            className={styles.article}
+          >
+            <p>
+              I am a young, hardworking and responsible web developer. I have
+              been coding since my early teenage years. I enjoy writing code.
+            </p>
+            <p>
+              I have experience using both frontend and backend technologies to
+              build beautiful, responsive and fuctional web apps
+            </p>
+            <p>
+              Leaving my clients impressed and delivering quality service are my
+              biggest motivation while writing codes.
+            </p>
+          </motion.article>
+          {/* <div className={styles.image__div}>
           <Image src={timmy} alt="timmy" className={styles.timmy__image} />
+        </div> */}
         </div>
-      </div>
 
-      <motion.h3 initial={{opacity:0}} animate={{opacity:1}} transition={{duration:2, delay:2.5}} className={styles.header}>My Stacks</motion.h3>
-      <div className={styles.stack__section}>
-        <motion.card initial={{x:"-1000vw"}} animate={{x:0}} transition={{duration:2, delay:1.5}} className={styles.card}>
-          <h2>Front-End</h2>
-          <p>
-            Here is a list of stack I use best for creating beautiful layout and
-            designs
-          </p>
-          <ul className={styles.stack__list}>
-            <li className={styles.listed__item}>
-              <span>HTML</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>CSS</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Bootstrap</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Bulma</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Tailwind CSS</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>SCSS</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Material UI</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Semantic UI</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Javascript</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>React Js</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Typescript</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>NextJs</span>
-            </li>
-          </ul>
-        </motion.card>
-        <motion.card initial={{x:"1000vw"}} animate={{x:0}} transition={{duration:2, delay:2.5}} className={styles.card}>
-          <h2>Back-End</h2>
-          <p>
-            On the backend, I am very much comfortable using the following
-            stacks
-          </p>
-          <ul className={styles.stack__list}>
-            <li className={styles.listed__item}>
-              <span>Nodejs</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Expressjs</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Javascript</span>
-            </li>
-          </ul>
-        </motion.card>
-        <motion.card initial={{x:"-1000vw"}} animate={{x:0}} transition={{duration:2, delay:3.5}} className={styles.card}>
-          <h2>Database</h2>
-          <p>Here is a list of database technologies I use effectively</p>
-          <ul className={styles.stack__list}>
-            <li className={styles.listed__item}>
-              <span>Mongo DB</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Mongoose</span>
-            </li>
-          </ul>
-        </motion.card>
-        <motion.card initial={{x:"1000vw"}} animate={{x:0}} transition={{duration:2, delay:4.5}} className={styles.card}>
-          <h2>Wordpress</h2>
-          <p>
-            Here is a list of technologies I use for creating amazing wordpress
-            websites
-          </p>
-          <ul className={styles.stack__list}>
-            <li className={styles.listed__item}>
-              <span>Wordpress</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>WooCommerce</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Elementor</span>
-            </li>
-            <li className={styles.listed__item}>
-              <span>Divi</span>
-            </li>
-          </ul>
-        </motion.card>
-      </div>
-    </section>
+        <motion.h3
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 2.5 }}
+          className={styles.header}
+        >
+          My Stacks
+        </motion.h3>
+        <div className={styles.stack__section}>
+          <motion.card
+            initial={{ x: "-1000vw" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 2, delay: 1.5 }}
+            className={styles.card}
+          >
+            <h2>Front-End</h2>
+            <p>
+              Here is a list of stack I use best for creating beautiful layout
+              and designs
+            </p>
+            <ul className={styles.stack__list}>
+              <li className={styles.listed__item}>
+                <span>HTML</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>CSS</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Bootstrap</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Bulma</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Tailwind CSS</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>SCSS</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Material UI</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Semantic UI</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Javascript</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>React Js</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Typescript</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>NextJs</span>
+              </li>
+            </ul>
+          </motion.card>
+          <motion.card
+            initial={{ x: "1000vw" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 2, delay: 2.5 }}
+            className={styles.card}
+          >
+            <h2>Back-End</h2>
+            <p>
+              On the backend, I am very much comfortable using the following
+              stacks
+            </p>
+            <ul className={styles.stack__list}>
+              <li className={styles.listed__item}>
+                <span>Nodejs</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Expressjs</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Javascript</span>
+              </li>
+            </ul>
+          </motion.card>
+          <motion.card
+            initial={{ x: "-1000vw" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 2, delay: 3.5 }}
+            className={styles.card}
+          >
+            <h2>Database</h2>
+            <p>Here is a list of database technologies I use effectively</p>
+            <ul className={styles.stack__list}>
+              <li className={styles.listed__item}>
+                <span>Mongo DB</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Mongoose</span>
+              </li>
+            </ul>
+          </motion.card>
+          <motion.card
+            initial={{ x: "1000vw" }}
+            animate={{ x: 0 }}
+            transition={{ duration: 2, delay: 4.5 }}
+            className={styles.card}
+          >
+            <h2>Wordpress</h2>
+            <p>
+              Here is a list of technologies I use for creating amazing
+              wordpress websites
+            </p>
+            <ul className={styles.stack__list}>
+              <li className={styles.listed__item}>
+                <span>Wordpress</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>WooCommerce</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Elementor</span>
+              </li>
+              <li className={styles.listed__item}>
+                <span>Divi</span>
+              </li>
+            </ul>
+          </motion.card>
+        </div>
+      </motion.section>
     </>
   );
 }

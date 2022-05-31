@@ -1,13 +1,13 @@
-import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import timmy from "../public/nerd-geek-img.png";
+import About from "../components/about";
+import Projects from "../components/projects";
 
 export default function Home() {
   return (
     <>
-
       <motion.div
         initial={{
           opacity: 1,
@@ -152,6 +152,30 @@ export default function Home() {
           </li>
         </motion.ul>
       </div>
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          display: "none",
+          zIndex: 10,
+        }}
+        animate={{ opacity: 0, display: "contents" }}
+        transition={{ delay: 3, duration: 1 }}
+      >
+        {" "}
+        <About />{" "}
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 0,
+          display: "none",
+          zIndex: 10,
+        }}
+        animate={{ opacity: 0, display: "contents" }}
+        transition={{ delay: 3, duration: 1 }}
+      >
+        <Projects />
+      </motion.div>
     </>
   );
 }
