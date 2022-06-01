@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import timmy from "../public/nerd-geek-img.png";
@@ -7,7 +8,16 @@ import Projects from "../components/projects";
 
 export default function Home() {
   return (
-    <>
+      <>
+    <Head>
+        <title>About Me</title>
+        <meta name="description" content="Ok_Timmy Portfolio Website" />
+        <link rel="icon" href="/tim-logo.png" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+      </Head>
       <motion.div
         initial={{
           opacity: 1,
@@ -78,8 +88,8 @@ export default function Home() {
       <div>
         <motion.ul
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 5, duration: 2 }}
+          animate={{ opacity: 1, zIndex:10000 }}
+          transition={{ delay: 2, duration: 2 }}
           className={styles.side__nav}
         >
           <li>
@@ -91,9 +101,9 @@ export default function Home() {
             >
               <motion.i
                 whileHover={{
-                  scale: 2,
+                  scale: 1.4,
                   color: "rgb(220, 220, 220)",
-                  transition: { duration: 1 },
+                  transition: { duration: 0.5 },
                 }}
                 className="fa fa-solid fa-envelope"
               ></motion.i>
@@ -108,9 +118,9 @@ export default function Home() {
             >
               <motion.i
                 whileHover={{
-                  scale: 2,
+                  scale: 1.4,
                   color: "#055181",
-                  transition: { duration: 1 },
+                  transition: { duration: 0.5 },
                 }}
                 className="fa fa-brands fa-twitter"
               ></motion.i>
@@ -125,9 +135,9 @@ export default function Home() {
             >
               <motion.i
                 whileHover={{
-                  scale: 2,
+                  scale: 1.4,
                   color: "#4491de",
-                  transition: { duration: 1 },
+                  transition: { duration: 0.5 },
                 }}
                 className="fa fa-brands fa-linkedin"
               ></motion.i>
@@ -142,9 +152,9 @@ export default function Home() {
             >
               <motion.i
                 whileHover={{
-                  scale: 2,
+                  scale: 1.4,
                   color: "#c9510c",
-                  transition: { duration: 1 },
+                  transition: { duration: 0.5 },
                 }}
                 className="fa fa-brands fa-github"
               ></motion.i>

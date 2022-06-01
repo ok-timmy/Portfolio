@@ -4,7 +4,7 @@
 
 .section{
     width: 80%;
-    margin: auto;
+    margin: 7rem auto;
 }
 
 .about__me{
@@ -37,8 +37,9 @@
 
 .stack__section>*:nth-child(2){
     align-self: flex-end;
-align-content: flex-end;
+justify-content: flex-end;
 }
+
 
 .stack__section>*:nth-child(4){
     justify-content: flex-end;
@@ -46,7 +47,10 @@ align-content: flex-end;
     }
 
 .card{
+    margin-top: 1rem;
+    padding: 10px 20px;
     width: 60%;
+    border-radius: 20px;
     box-shadow: 5px 5px 5px 0px rgba(31, 30, 30, 0.75);
     -webkit-box-shadow: 5px 5px 5px 0px rgba(31, 30, 30, 0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(31, 30, 30, 0.75);
@@ -80,6 +84,7 @@ align-items: flex-end;
 
     .card{
         height: auto;
+        width: 100%;
     }
 
     .about__me{
