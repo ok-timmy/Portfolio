@@ -1,15 +1,40 @@
 .project__page {
   width: 80%;
   margin: auto;
-  /* font-family: "Alumni Sans", sans-serif; */
+  font-family: 'Nunito', sans-serif;
+}
+
+.projectdiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectdiv__revealer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  margin: 2rem auto;
+  padding: 20px 0;
 }
 
 .project__header {
+  --text-stroke-color: rgba(255,255,255,0.9);
   text-align: center;
+  font-size: 3rem;
+  padding-top: 3rem;
+  font-family: "Arial";
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
 .project__card {
+  margin: 2rem auto;
   padding: 20px 10px;
+  background-color: #1E1E1E;
+  border-radius: 10px;
   display: flex;
   box-shadow: 0px 6px 5px 0px rgba(30, 30, 30, 0.75);
   -webkit-box-shadow: 0px 6px 5px 0px rgba(30, 30, 30, 0.75);
@@ -18,6 +43,7 @@
 
 .project__left {
   flex: 5;
+  height: 100%;
 }
 
 .project__image {
@@ -38,13 +64,65 @@
 }
 
 .listed__item {
-  padding: 2px 5px;
+  background-color: rgba(72, 72, 235, 0.6);
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 5px 3px;
 }
 
 .link__icon {
   font-size: 20px;
   margin-right: 1.5rem;
 }
+
+
+.advice {
+  font-size: 1.5rem;
+}
+
+
+.button {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #4848EB;
+  --fs-size: 2rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover__text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover__text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+ 
 
 @media screen and (max-width: 480px) {
   .project__page {

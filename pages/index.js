@@ -6,11 +6,13 @@ import timmy from "../public/nerd-geek-img.png";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Contact from "../components/Contact";
+// import Footer from "../components/Footer";
+import wave from "../public/Waving-Hand .png";
 
 export default function Home() {
   return (
-      <>
-    <Head>
+    <>
+      <Head>
         <title>About Me</title>
         <meta name="description" content="Ok_Timmy Portfolio Website" />
         <link rel="icon" href="/tim-logo.png" />
@@ -25,9 +27,19 @@ export default function Home() {
           zIndex: 10,
         }}
         animate={{ opacity: 0, display: "none" }}
-        transition={{ delay: 2, duration: 1 }}
+        transition={{ delay: 3, duration: 2 }}
         className={styles.p}
       >
+        <motion.div
+          style={{ width: "100px", margin: " 0 auto" }}
+          animate={{
+            rotate: [0, 24, -8, 20, 4, 10, 0]
+          }}
+          transition={{duration: 1, repeat: 2}}
+        >
+          {" "}
+          <Image src={wave} alt={wave} height={100} width={100} />
+        </motion.div>
         Hello There
       </motion.div>
       <div className={styles.body}>
@@ -37,16 +49,16 @@ export default function Home() {
               initial={{
                 position: "absolute",
                 x: "100px",
-                y: "-800px",
-                fontSize: "400px",
+                y: "-2000px",
+                fontSize: "600px",
               }}
               animate={{
                 position: "relative",
                 y: "0",
                 x: "0",
-                fontSize: "100px",
+                fontSize: "120px",
               }}
-              transition={{ delay: 2, duration: 2.5 }}
+              transition={{ delay: 2, duration: 3.5 }}
               className={styles.my__name}
             >
               TIMMY
@@ -71,6 +83,7 @@ export default function Home() {
                   cursor: "pointer",
                 }}
                 className={styles.hire__link}
+                href={"mailto:oktimmy45@gmail.com"}
               >
                 Hire Me
               </motion.a>
@@ -89,7 +102,7 @@ export default function Home() {
       <div>
         <motion.ul
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, zIndex:10000 }}
+          animate={{ opacity: 1, zIndex: 10000 }}
           transition={{ delay: 2, duration: 2 }}
           className={styles.side__nav}
         >
@@ -102,7 +115,7 @@ export default function Home() {
             >
               <motion.i
                 whileHover={{
-                  scale: 1.4,
+                  scale: 1.2,
                   color: "rgb(220, 220, 220)",
                   transition: { duration: 0.5 },
                 }}
@@ -119,7 +132,7 @@ export default function Home() {
             >
               <motion.i
                 whileHover={{
-                  scale: 1.4,
+                  scale: 1.2,
                   color: "#055181",
                   transition: { duration: 0.5 },
                 }}
@@ -136,7 +149,7 @@ export default function Home() {
             >
               <motion.i
                 whileHover={{
-                  scale: 1.4,
+                  scale: 1.2,
                   color: "#4491de",
                   transition: { duration: 0.5 },
                 }}
@@ -153,7 +166,7 @@ export default function Home() {
             >
               <motion.i
                 whileHover={{
-                  scale: 1.4,
+                  scale: 1.2,
                   color: "#c9510c",
                   transition: { duration: 0.5 },
                 }}
@@ -186,7 +199,8 @@ export default function Home() {
         transition={{ delay: 3, duration: 1 }}
       >
         <Projects />
-        <Contact/>
+        <Contact />
+        {/* <Footer/> */}
       </motion.div>
     </>
   );

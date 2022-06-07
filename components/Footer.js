@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 function Footer() {
   return (
     <motion.div
-      initial={{ opacity: 0, display: "none" }}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1, display: "content" }}
       transition={{ duration: 2, delay: 3 }}
       className={styles.footer}
     >
-      Built by Timmy Using NextJS
+      Built by Timmy Using NextJS Copyright
     </motion.div>
   );
 }

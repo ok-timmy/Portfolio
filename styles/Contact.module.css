@@ -28,7 +28,7 @@
     color: white;
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
-    border: 2px solid #8707ff;
+    border: 2px solid #373799;
     border-radius: 10px;
     padding: 20px 25px;
     background: transparent;
@@ -37,25 +37,25 @@
 }
 
 .input:active {
-    box-shadow: 2px 2px 15px #8707ff inset;
+    box-shadow: 2px 2px 15px #373799 inset;
 }
 
 .textarea {
     color: white;
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
-    border: 2px solid #8707ff;
+    border: 2px solid #373799;
     border-radius: 10px;
     padding: 10px 25px;
     background: transparent;
-    height: 8rem;
+    height: 10rem;
     width: 100%;
     margin-bottom: 1rem;
     resize: none;
 }
 
 .textarea:active {
-    box-shadow: 2px 2px 15px #8707ff inset;
+    box-shadow: 2px 2px 15px #373799 inset;
 }
 
 .textarea::placeholder {  
@@ -64,7 +64,7 @@
 }
 
 .button {
-    --color: #8707FF;
+    --color: #373799;
     margin: 0.5rem auto 1.5rem;
     width: 10rem;
     padding: 0.8em 1.7em;

@@ -1,21 +1,28 @@
 .header {
+  --text-stroke-color: rgba(255,255,255,0.9);
   text-align: center;
+  font-size: 3rem;
+  padding-top: 3rem;
+  font-family: "Arial";
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
 .section {
   width: 80%;
-  margin: 7rem auto;
+  margin: 4rem auto;
 }
 
 .about__me {
-  display: flex;
-  flex-direction: row;
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  background-color: rgba(19, 19, 19, 0.32);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-.article {
-  padding-right: 40px;
-  flex: 5;
-}
+
 
 .image__div {
   width: 10rem;
@@ -119,6 +126,7 @@
 
   .about__me {
     flex-direction: column-reverse;
+    width: 100%;
   }
 
   .section {

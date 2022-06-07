@@ -37,7 +37,6 @@ export default function About() {
       >
         <h2 className={styles.header}>About Timmy</h2>
 
-        <h3>Description</h3>
         <div className={styles.about__me}>
           <motion.article
             initial={{ opacity: 0 }}
@@ -46,7 +45,7 @@ export default function About() {
             className={styles.article}
           >
             <p>
-              I am a young, hardworking and responsible web developer. I have
+              Hello World, I am a young, hardworking and responsible web developer. I have
               been coding since my early teenage years. I enjoy writing code.
             </p>
             <p>
@@ -58,9 +57,6 @@ export default function About() {
               biggest motivation while writing codes.
             </p>
           </motion.article>
-          {/* <div className={styles.image__div}>
-          <Image src={timmy} alt="timmy" className={styles.timmy__image} />
-        </div> */}
         </div>
 
         <motion.h3
