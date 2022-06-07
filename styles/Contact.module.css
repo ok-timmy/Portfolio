@@ -1,0 +1,135 @@
+.form__container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input__div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input__div> *:first-child{
+    margin-right: 30px;
+}
+
+.input {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    border: 2px solid #8707ff;
+    border-radius: 10px;
+    padding: 20px 25px;
+    background: transparent;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input:active {
+    box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+.textarea {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    border: 2px solid #8707ff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    height: 8rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    resize: none;
+}
+
+.textarea:active {
+    box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+.textarea::placeholder {  
+  font-family: 'Nunito', sans-serif;
+  font-size: larger;
+}
+
+.button {
+    --color: #8707FF;
+    margin: 0.5rem auto 1.5rem;
+    width: 10rem;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid var(--color);
+    font-family: inherit;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+   }
+   
+   .button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .button::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .button:hover {
+    color: rgb(246, 248, 249);
+   }
+   
+   .button:active {
+    filter: brightness(.8);
+   }
+   
+
+@media screen and (max-width:480px) {
+    .form__container{
+        width: 90%;    
+    }
+
+    .input__div> *:first-child{ 
+    margin-right: 0;
+    }
+
+    .input__div {
+        flex-direction: column;
+    }
+}

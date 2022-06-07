@@ -33,7 +33,7 @@ function WordPress() {
       transition={{ duration: 2, delay: 4.5 }}
       className={styles.card}
     >
-      <h2>Wordpress</h2>
+      <h2>WordPress</h2>
       <p>
         Here is a list of technologies I use for creating amazing wordpress
         websites

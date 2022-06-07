@@ -254,7 +254,6 @@ export default function Projects() {
                 </a>
               </div>
             </div>
-            s
           </motion.card>
         </div>
 

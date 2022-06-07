@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import timmy from "../public/nerd-geek-img.png";
 import About from "../components/about";
 import Projects from "../components/projects";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -185,6 +186,7 @@ export default function Home() {
         transition={{ delay: 3, duration: 1 }}
       >
         <Projects />
+        <Contact/>
       </motion.div>
     </>
   );
