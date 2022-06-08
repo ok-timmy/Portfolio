@@ -2,7 +2,6 @@
   color: #ffffff;
   height: 100vh;
   width: 80%;
-  /* overflow-y: hidden; */
   margin: auto;
   position: relative;
   display: flex;
@@ -28,9 +27,13 @@
   position: relative;
   height: 90vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   font-family: "Alumni Sans", sans-serif;
+}
+
+.name__div {
+  margin: auto 0 !important;
 }
 
 .image__div{
@@ -39,7 +42,7 @@
 
 .my__name {
   --text-stroke-color: rgba(255,255,255,0.9);
-  font-size: 100px;
+  font-size: 80px;
   padding: 0;
   margin: 0;
   font-family: "Arial";
@@ -102,11 +105,12 @@
 }
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:600px) {
 
   .body{
     width: 90%;
     flex-direction: column;
+    height: 75vh;
   }
 
   .p{
@@ -115,7 +119,8 @@
 
   .main__div{
     width: 100%;
-    height: 85vh;
+    height: 75vh;
+    flex-direction: column;
   }
 
   .my__desc{
@@ -134,8 +139,35 @@
     position: relative;
     flex-direction: row;
     height: auto;
-    /* margin: 0; */
     align-self: center;
     padding: 0;
+    
+  }
+}
+
+@media screen and (max-width:960px) {
+  .body{
+    width: 90%;
+    flex-direction: column;
+    height: 75vh;
+  }
+
+  .image__div{
+    /* position: absolute;
+    top:60%;
+    left: 0;
+    height: 25rem;
+    width: 25rem; */
+    display: none;
+  }
+  .main__div{
+    width: 100%;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* padding-left: 5rem; */
+  }
+  .side__nav{
+  height: 30vh;
   }
 }

@@ -6,7 +6,6 @@ import timmy from "../public/nerd-geek-img.png";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Contact from "../components/Contact";
-// import Footer from "../components/Footer";
 import wave from "../public/Waving-Hand .png";
 
 export default function Home() {
@@ -44,21 +43,21 @@ export default function Home() {
       </motion.div>
       <div className={styles.body}>
         <motion.div className={styles.main__div}>
-          <motion.div>
+          <motion.div className={styles.name__div}>
             <motion.p
               initial={{
                 position: "absolute",
                 x: "100px",
                 y: "-2000px",
-                fontSize: "600px",
+                fontSize: "50rem",
               }}
               animate={{
                 position: "relative",
                 y: "0",
                 x: "0",
-                fontSize: "120px",
+                fontSize: "6rem",
               }}
-              transition={{ delay: 2, duration: 3.5 }}
+              transition={{ delay: 3, duration: 5 }}
               className={styles.my__name}
             >
               TIMMY
@@ -93,7 +92,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: "0" }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 4, duration: 1.5, stiffness: 100 }}
+          transition={{ delay: 5, duration: 5 }}
           className={styles.image__div}
         >
           <Image src={timmy} alt={"Timmy"} />
@@ -102,8 +101,8 @@ export default function Home() {
       <div>
         <motion.ul
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, zIndex: 10000 }}
-          transition={{ delay: 2, duration: 2 }}
+          animate={{ opacity: 1, zIndex: 10 }}
+          transition={{ delay: 4, duration: 2 }}
           className={styles.side__nav}
         >
           <li>

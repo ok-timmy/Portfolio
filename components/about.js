@@ -1,43 +1,28 @@
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import styles from "../styles/About.module.css";
-// import timmy from "../public/timmy.jpg";
-import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Frontend from "./Stacks/Frontend";
 import Backend from "./Stacks/Backend";
 import WordPress from "./Stacks/WordPress";
 import Database from "./Stacks/Database";
 
-const boxVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-  hidden: { opacity: 0, scale: 0 },
-};
-
 export default function About() {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     control.start("visible");
-  //   } else {
-  //     control.start("hidden");
-  //   }
-  // }, [control, inView]);
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+    hidden: { opacity: 0, scale: 0 },
+  };
 
   return (
     <>
-      <motion.section
-        // ref={ref}
-        // variants={boxVariant}
-        // initial="hidden"
-        // animate={control}
-        className={styles.section}
-      >
+      <motion.section className={styles.section} id={"About"}>
         <h2 className={styles.header}>About Timmy</h2>
 
-        <div className={styles.about__me}>
+        <motion.div
+          className={styles.about__me}
+          initial={boxVariant.hidden}
+          whileInView={boxVariant.visible}
+        >
           <motion.article
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -45,8 +30,9 @@ export default function About() {
             className={styles.article}
           >
             <p>
-              Hello World, I am a young, hardworking and responsible web developer. I have
-              been coding since my early teenage years. I enjoy writing code.
+              Hello World, I am a young, hardworking and responsible web
+              developer. I have been coding since my early teenage years. I
+              enjoy writing code.
             </p>
             <p>
               I have experience using both frontend and backend technologies to
@@ -57,7 +43,7 @@ export default function About() {
               biggest motivation while writing codes.
             </p>
           </motion.article>
-        </div>
+        </motion.div>
 
         <motion.h3
           initial={{ opacity: 0 }}

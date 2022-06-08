@@ -30,6 +30,11 @@
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
+.project__subheader{
+  text-align: center;
+  font-size: 1.3rem;
+}
+
 .project__card {
   margin: 2rem auto;
   padding: 20px 10px;
@@ -124,7 +129,7 @@
 }
  
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 960px) {
   .project__page {
     width: 95%;
   }
@@ -132,3 +137,4 @@
     flex-direction: column;
   }
 }
+

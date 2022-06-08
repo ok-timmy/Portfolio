@@ -2,6 +2,7 @@ import bootstrapLogo from "../../public/Stacks/Frontend/bootstrapLogo.png";
 import bulmaLogo from "../../public/Stacks/Frontend/bulmaLogo.png";
 import htmlLogo from "../../public/Stacks/Frontend/htmlLogo.png";
 import cssLogo from "../../public/Stacks/Frontend/cssLogo.png";
+import SCLogo from "../../public/Stacks/Frontend/SCLogo.png";
 import jsLogo from "../../public/Stacks/Frontend/jsLogo.png";
 import sassLogo from "../../public/Stacks/Frontend/sassLogo.png";
 import tailwindLogo from "../../public/Stacks/Frontend/tailwindLogo.png";
@@ -13,7 +14,6 @@ import semanticui from "../../public/Stacks/Frontend/semanticui.png";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import styles from "../../styles/About.module.css";
-import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const FrontendStacks = [
@@ -46,6 +46,10 @@ const FrontendStacks = [
     logo: materialui,
   },
   {
+    name: "Styled Components",
+    logo: SCLogo,
+  },
+  {
     name: "Semantic UI",
     logo: semanticui,
   },
@@ -67,30 +71,18 @@ const FrontendStacks = [
   },
 ];
 
-const boxVariant = {
-  visible: { x: 0, transition: { duration: 0.5 } },
-  hidden: { x: "-1000vw" },
-};
+
 
 export function Frontend() {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 1.5 } },
+    hidden: { opacity: 0, scale: 0 },
+  };
 
   return (
     <motion.card
-    //   ref={ref}
-    //   variants={boxVariant}
-    //   initial="hidden"
-    //   animate={control}
-    //   transition={{ duration: 2, delay: 1.5 }}
+      initial={boxVariant.hidden}
+      whileInView={boxVariant.visible}
       className={styles.card}
     >
       <h2>Front-End</h2>

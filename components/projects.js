@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Head from "next/head";
 import { motion } from "framer-motion";
 import styles from "../styles/projects.module.css";
 import ecommerce_app from "../public/timshop.jpg";
@@ -80,7 +79,7 @@ export default function Projects() {
 
   return (
     <>
-      <section className={styles.project__page}>
+      <section className={styles.project__page} id={"Projects"}>
         <h3 className={styles.project__header}>My Projects</h3>
 
         <p className={styles.project__subheader}>

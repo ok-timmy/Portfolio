@@ -89,7 +89,7 @@ function Contact() {
   };
 
   return (
-    <div className={styles.form__container}>
+    <div className={styles.form__container} id={"Contact"}>
       <h2 className={styles.heading}>Get In Touch</h2>
       <form className={styles.form} onSubmit={(e) => sendMail(e)}>
         <div className={styles.input__div}>

@@ -26,11 +26,16 @@ const WordPressStacks = [
 ];
 
 function WordPress() {
+
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 1.5 } },
+    hidden: { opacity: 0, scale: 0 },
+  };
+
   return (
     <motion.card
-      initial={{ x: "1000vw" }}
-      animate={{ x: 0 }}
-      transition={{ duration: 2, delay: 4.5 }}
+      initial={boxVariant.hidden}
+      whileInView={boxVariant.visible}
       className={styles.card}
     >
       <h2>WordPress</h2>
