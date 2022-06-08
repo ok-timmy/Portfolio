@@ -64,14 +64,14 @@ function Header() {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    // href="https://docs.google.com/document/d/1jm84AAhzN0xR3CudbnIPdN2cFJUDPD-giMEvZCpcFJw/edit?usp=sharing"
+                  <Link
+                   href= "https://docs.google.com/document/d/1-a0uXiqhcoPKQCKQE63t_GD0J0BQPKQfuCf907I9Ra4/edit"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.header__menu__tab}
                   >
                     Resume
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
