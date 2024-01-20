@@ -9,7 +9,8 @@ function Footer() {
       transition={{ duration: 2, delay: 3 }}
       className={styles.footer}
     >
-      Built by Using NextJS  Timmy &copy;
+      <div>Built by Using NextJS  Timmy &copy;</div>
+      <div>Reach me on LinkedIn</div>
     </motion.div>
   );
 }

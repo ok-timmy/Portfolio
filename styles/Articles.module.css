@@ -1,0 +1,94 @@
+.article__header {
+    --text-stroke-color: rgba(255,255,255,0.9);
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 3rem;
+    font-family: "Arial";
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+
+  .article__subheader{
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+
+  .article__card{
+    width: 16rem;
+    height: 16rem;
+    border-radius: 1rem;
+  }
+
+  .articles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+  }
+
+  .article__card{
+
+  }
+
+  .article__cover{
+
+  }
+
+  .article__title{
+
+  }
+
+  .article__title{
+    
+  }
+
+
+  .advice {
+    font-size: 1.125rem;
+    padding: 2rem;
+  }
+  
+  
+  .button {
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    /* --animation-color: #4848EB; */
+    --animation-color: #28D7C0;
+    --fs-size: 2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover__text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover__text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+   

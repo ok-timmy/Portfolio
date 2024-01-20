@@ -1,14 +1,3 @@
-.body {
-  color: #ffffff;
-  height: 100vh;
-  width: 80%;
-  margin: auto;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .p {
   position: absolute;
   font-family: "Alumni Sans", sans-serif;
@@ -23,38 +12,6 @@
   text-align: center;
 }
 
-.main__div {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-family: "Alumni Sans", sans-serif;
-}
-
-.name__div {
-  margin: auto 0 !important;
-}
-
-.image__div{
-  height: 20rem;
-}
-
-.my__name {
-  --text-stroke-color: rgba(255,255,255,0.9);
-  font-size: 80px;
-  padding: 0;
-  margin: 0;
-  font-family: "Arial";
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
-}
-
-.my__desc {
-  font-size: 60px;
-  padding: 0;
-  margin: 0;
-}
 
 .side__nav {
   position: absolute;
@@ -91,18 +48,7 @@
   font-size: 1.5rem;
 }
 
-.hire__me{
-  border: none;
-  background-color: transparent;
-  margin-top: 20px;
-  color: white;
-}
 
-.hire__link{
-  border: rgb(72, 72, 235) solid 2px;
-  padding: 10px 20px;
-  border-radius: 13px;
-}
 
 
 @media screen and (max-width:600px) {
@@ -152,14 +98,6 @@
     height: 75vh;
   }
 
-  .image__div{
-    /* position: absolute;
-    top:60%;
-    left: 0;
-    height: 25rem;
-    width: 25rem; */
-    display: none;
-  }
   .main__div{
     width: 100%;
     height: 75vh;

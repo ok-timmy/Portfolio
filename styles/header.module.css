@@ -1,15 +1,13 @@
-.header__div {
-  position: fixed;
-  width: 100vw;
-  z-index: 10000;
-  background-color: rgb(39, 39, 39, 0.9);
-}
+
 
 .nav__wrapper {
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
   height: 50px;
-  box-shadow: 0px 7px 5px 0px rgba(38, 37, 37, 0.75);
+  /* box-shadow: 0px 7px 5px 0px rgba(38, 37, 37, 0.75);
   -webkit-box-shadow: 0px 7px 5px 0px rgba(38, 37, 37, 0.75);
-  -moz-box-shadow: 0px 7px 5px 0px rgba(38, 37, 37, 0.75);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(38, 37, 37, 0.75); */
 }
 
 .nav {

@@ -1,0 +1,80 @@
+.body {
+    color: #ffffff;
+    height: 100vh;
+    width: 80vw;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .main__div {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: end;
+    font-family: "Alumni Sans", sans-serif;
+  }
+  
+  .name__div {
+    margin: auto 0 !important;
+  }
+  
+ 
+  
+  .my__name {
+    --text-stroke-color: rgba(255,255,255,0.9);
+    padding: 0;
+    margin: 0;
+    font-family: "Arial";
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    background: linear-gradient(-45deg, #eeaa52, #e73c6f, #2394d5, #2af3b7);
+      background-size: 175% 175%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 6px transparent;
+  }
+  
+  .my__desc {
+    font-size: 60px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hire__me{
+    margin-top: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    border: rgb(41, 226, 177) solid 2px;
+    padding: 10px 20px;
+    border-radius: 13px;
+}
+
+.hire__me:hover{
+   background-color: rgb(41, 226, 177);
+   cursor: pointer;
+   transition: ease-in;
+   transition-delay: 0.25s;
+   transition-duration: 0.5s;
+  }
+
+
+  .about__me {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    width: 30rem;
+    height: auto;
+    font-size: 1.3rem;
+    background-color: rgba(19, 19, 19, 0.32);
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 200;
+  }

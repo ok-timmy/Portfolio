@@ -6,6 +6,11 @@ import weather_app from "../public/weather-app.jpg";
 import todo_app from "../public/todos.jpg";
 import note_app from "../public/note-app.jpg";
 import Link from "next/link";
+// import { gsap } from "gsap";
+// import  {ScrollTrigger}  from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+// gsap.registerPlugin(ScrollTrigger);
 
 const projectsList = [
   {
@@ -77,6 +82,37 @@ export default function Projects() {
     },
   };
 
+  const addToRefs = (el) => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el);
+    }
+  };
+
+  const revealRefs = useRef([]);
+  revealRefs.current = [];
+
+  //   useEffect(() => {
+
+  //     revealRefs.current.forEach((el, index) => {
+
+  //         gsap.fromTo(el, {
+  //             autoAlpha: 0
+  //         }, {
+  //             duration: 1,
+  //             autoAlpha: 1,
+  //             ease: 'none',
+  //             scrollTrigger: {
+  //                 id: `section-${index+1}`,
+  //                 trigger: el,
+  //                 start: 'top center+=100',
+  //                 toggleActions: 'play none none reverse'
+  //             }
+  //         });
+
+  //     });
+
+  // }, []);
+
   return (
     <>
       <section className={styles.project__page} id={"Projects"}>
@@ -85,83 +121,19 @@ export default function Projects() {
         <p className={styles.project__subheader}>
           Here is a List of Some awesome projects I have built in the past
         </p>
-        <div>
+        <div className={styles.projectdiv}>
           {projectsList.map((p) => {
             return (
-              <div className={styles.projectdiv} key={p.name}>
-              <motion.card
-              initial={{ y: 50, opacity: 0}}
-                whileInView={fade}
-                // animate={{ x: "0" }}
-                // transition={{ delay: 1, duration: 1.5, stiffness: 100 }}
+              <div
+                key={p.name}
+                ref={addToRefs}
                 className={styles.project__card}
-               
               >
-                <div className={styles.project__left}>
-                  <Image
-                    src={p.image}
-                    alt={p.name}
-                    responsive={"100"}
-                    className={styles.project__image}
-                  />
+                <div className={styles.project__name}>
+                  <div className={styles.project__name__normal}>{p.name}</div>
+                  <div className={styles.project__name__hover}>{p.name}</div>
                 </div>
-                <div className={styles.project__right}>
-                  <h3>{p.name}</h3>
-                  <p>{p.description}</p>
-                  <p>Built with</p>
-                  <ul className={styles.stack__list}>
-                    {p.stackUsed.map((s) => {
-                      return (
-                        <li className={styles.listed__item} key={s}>
-                          {" "}
-                          {s}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  <div>
-                    <span>
-                      <a
-                        href={p.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <motion.i
-                          whileHover={{
-                            scale: 1.5,
-                            originX: 0,
-                            color: "rgba(72, 72, 235, 0.6)",
-                            transition: { duration: 1 },
-                          }}
-                          className={`fa fa-light fa-link ${styles.link__icon}`}
-                        ></motion.i>
-                      </a>
-                    </span>
-                    <span>
-                      <a
-                        href={p.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <motion.i
-                          whileHover={{
-                            scale: 1.5,
-                            originX: 0,
-                            color: "#c9510c",
-                            transition: { duration: 1 },
-                          }}
-                          className={`fa fa-brands fa-github  ${styles.link__icon}`}
-                        ></motion.i>
-                      </a>
-                    </span>
-                  </div>
-                </div>
-              </motion.card>
-                <motion.div
-                  className={styles.projectdiv__revealer}
-                  whileInView={revealer}
-                  initial={{ width: "0%", right: "100%" }}
-                ></motion.div>
+                <p>{p.description}</p>
               </div>
             );
           })}
